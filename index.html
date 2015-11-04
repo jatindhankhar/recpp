@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ReCPP - Re - Introduction to C++</title>
+
+		<meta name="description" content="Re-introduction to C++">
+		<meta name="author" content="Jatin Dhankhar">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>ReCpp</h1>
+					<h3>Re-introdcution to C++ (Modern)</h3>
+					<p>
+						<small>Created by <a href="https://jatindhankhar.in">Jatin Dhankhar</a> / <a href="http://twitter.com/jatindhankhar_">@jatindhankhar_</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>C++ is not C with classes</h2>
+					<p>
+						C++ is beautiful and it makes me sad that people don't use it the modern way.
+						They write C with classes
+						<img src="slap.jpg" alt="" />
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h2>Don't</h2>
+						<ul>
+							<li>Raw Pointers</li>
+							<li><code>char[]</code></li>
+							<li>strlen</li>
+							<li>Legacy from C</li>
+							<li>Self coded algorithms and containers</li>
+						</ul>
+						<hr>
+        <p> <i style="color:red;">Don't</i> <code> char* str = new char[1024]; </code></p>
+					<p>	<i style="color:green"> Do</i> <code> std::string str; </code> </p>
+					</section>
+
+
+				<section>
+					<h2>History to Bore/engage people ?</h2>
+					<p>
+<blockquote>
+“C++11 feels like a new language.” – Bjarne Stroustrup
+</blockquote>
+					</p>
+					<img src="coming_cpp.gif" alt="" />
+				</section>
+
+				<section>
+					<h2>Our Targets</h2>
+					<ul>
+
+						 <li>Vectors</li>
+	           <li>Auto</li>
+	           <li>Inbuilt Algorithms</li>
+	           <li>Inbuilt Containers</li>
+	           <li>Ranges</li>
+	           <li>Lambdas</li>
+					</ul>
+
+				</section>
+
+				<section data-background="orange" data-background-transition="zoom">
+					<h4>Headaches and Aspirin - Trimmed Quote</h4>
+				<p>	<blockquote cite="http://blog.mrmeyer.com/2015/if-math-is-the-aspirin-then-how-do-you-create-the-headache/">
+		 One of the worst things you can do is force people who don’t feel pain to take your aspirin.
+Math shouldn’t feel pointless. Math isn’t pointless. It may not have a point in job [y] or [z] but math has a point in math. We invented new math to resolve the limitations of old math. My challenge to all of us here is, before you offer students the new, more powerful math, put them in a place to experience the limitations of the older, less powerful math. - Dan Meyer
+					</blockquote></p>
+
+				</section>
+
+				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Vectors</h2>
+					<p>
+						Dynamic Arrays
+					</p>
+					<hr>
+					<code>std::vector</code>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Auto</h2>
+          <img src="auto.jpg" alt="" /><br>
+         <code>auto</code>
+				 <hr>
+					<p>
+             One word to rule them all?
+					</p>
+
+				</section>
+
+				<section data-background="white" data-background-transition="slide">
+					<h2>Range based for loops</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+for(auto el : container) process(el);
+					</code></pre>
+          <hr>
+
+					<img src="mind_blown.gif" alt="" height="500" />
+				</section>
+
+				<section data-background="pink" data-background-transition="zoom">
+ 				 <h2>DRY - Don't repeat yourself</h2>
+				 <p> Learn Ranges and Lambdas before (they are next)</p>
+ 				 <ul>
+ 				 	<li>Sort</li>
+					<li>Count</li>
+					<li>Copy</li>
+					<li>Find</li>
+ 				 </ul>
+ 				 <hr>
+				 <code>std::algorithm</code>
+ 			 </section>
+				<section>
+					<h2>Range</h2>
+					<h1><code>[begin,end)</code>
+
+				</section>
+
+				<section data-background="orange" data-background-transition="fade">
+					<h2>Lambdas - Ultimate Beauty</h2>
+					<h2><code>[](){}</code></h2>
+
+
+					<img src="call_me.jpg" alt="" align="center"/>
+					<br>
+					<p>Call me maybe ?</p>
+				</section>
+
+				<section data-background="lime">
+					<h2>Take a Moment</h2>
+					<p>
+						It was just a (gentle?) re-introduction many things were not discussed in detail (smart pointet,move semantics,TMP). It was a just a tip of Iceberg?
+						Keep Learning. Found any mistake, correct me, maybe?
+					</p>
+				</section>
+
+				<section>
+					<h2>Questions</h2>
+					<h1><code>?</code></h1>
+				</section>
+				<section>
+					<h2>Credits and Futher Readings</h2>
+					<ul>
+						<li><a href="http://memegenerator.net/instance2/2740783">Slap Meme -Memegenerator</a></li>
+						<li><a href="http://klmr.me/slides/modern-cpp/#1">Don't use ****** pointers</li>
+						<li><a href="http://truegif.com/generator?remake=334"> I am coming - GIF </a> </li>
+            <li><a href="https://msdn.microsoft.com/en-in/library/hh279654.aspx">Welcome back to C++ </a></li>
+						<li><a href="http://herbsutter.com/elements-of-modern-c-style/">Herb Shutter - Elements of modern C++</a></li>
+            <li><a href="http://homepages.e3.net.nz/~djm/cppcontainers.html">C++ CheatSheet </a></li>
+          <li><a href="http://mkremins.github.io/blog/doors-headaches-intellectual-need/"> Heaches and Apsirins </a> </li>
+          <li><a href="http://blog.mrmeyer.com/2015/if-math-is-the-aspirin-then-how-do-you-create-the-headache/">Dan Meyer Quote</a></li>
+          <li><a href="http://memegenerator.net/instance/65301578"> Spidey Great Power Sweg</a></li>
+          <li><a href="http://memegenerator.net/instance2/2742123">Auto everywhere</a></li>
+          <li><a href="http://giphy.com/gifs/tim-and-eric-mind-blown-EldfH1VJdbrwY">Mind Blown Gif</a></li>
+          <li><a href="http://stackoverflow.com/questions/7627098/what-is-a-lambda-expression-in-c11">
+					Lambdas</a></li>
+					<li><a href="http://memegenerator.net/instance2/2742665">Call me maye - MEME</a></li>
+					</ul>
+				</section>
+
+				<section style="text-align: left;">
+					<h1>return 0;</h1>
+<hr>
+         <img src="sweg.jpg" alt="" /></p>
+
+
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
